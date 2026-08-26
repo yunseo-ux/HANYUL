@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한율</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="주요 메뉴">
+      <a class="brand" href="#main" aria-label="한율 홈">
+        <img src="./assets/logo.png" alt="한율" />
+      </a>
+
+      <nav class="primary-nav" aria-label="주요 내비게이션">
+        <a href="#shopping">쇼핑</a>
+        <a href="#brand">브랜드</a>
+        <a href="#diagnosis">피부진단</a>
+        <a href="#support">고객센터</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" aria-label="검색">
+          <img src="./assets/search.svg" alt="" />
+        </button>
+        <button type="button" aria-label="마이페이지">
+          <img src="./assets/person.svg" alt="" />
+        </button>
+        <button type="button" aria-label="장바구니">
+          <img src="./assets/shopping-bag.svg" alt="" />
+        </button>
+      </div>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="메뉴 열기"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="한율 브랜드 메인 비주얼">
+        <img
+          class="hero-image"
+          src="./assets/raw-1.png"
+          alt="한옥과 자연 속에 놓인 한율 스킨케어 제품"
+        />
+        <a
+          class="scroll-guide"
+          href="#brand-intro"
+          aria-label="브랜드 소개로 이동"
+        >
+          <img class="circle-arrow" src="./assets/circle-arrow.svg" alt="" />
+        </a>
+      </section>
+
+      <section
+        class="brand-intro"
+        id="brand-intro"
+        aria-labelledby="brand-intro-title"
+      >
+        <h1 id="brand-intro-title">자연이 빚은 시간,<br />피부에 닿다</h1>
+        <p>한국의 자연을 당신의 일상에</p>
+      </section>
+
+      <section class="wave-video" id="brand" aria-label="한율 제품 영상">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="./assets/main video.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section class="line-intro" aria-labelledby="line-intro-title">
+        <img class="line-intro-bg" src="./assets/view-more-bg-1.png" alt="" />
+        <h2 id="line-intro-title">한율의<br />자연을 담은 라인</h2>
+        <button
+          class="view-more"
+          type="button"
+          aria-label="한율의 자연을 담은 라인 더 보기"
+        >
+          <span>VIEW MORE</span>
+          <img src="./assets/view-more-arrow.svg" alt="" />
+        </button>
+      </section>
+
+      <section class="material-scroll" aria-label="한율의 자연 원료">
+        <div class="material-sticky">
+          <article class="material-card">
+            <img src="./assets/material-1.png" alt="어린쑥과 산수 풍경" />
+            <div class="material-copy">
+              <h2>어린쑥</h2>
+              <p>진정</p>
+            </div>
+          </article>
+          <article class="material-card">
+            <img src="./assets/material-3.png" alt="달빛유자와 산수 풍경" />
+            <div class="material-copy">
+              <h2>달빛유자</h2>
+              <p>생기</p>
+            </div>
+          </article>
+          <article class="material-card">
+            <img src="./assets/material-2.png" alt="빨간쌀과 산수 풍경" />
+            <div class="material-copy">
+              <h2>빨간쌀</h2>
+              <p>보습·탄력</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="products-scroll" aria-label="한율 원료별 제품">
+        <div class="products-sticky">
+          <div class="product-scene product-scene-base">
+            <img src="./assets/products-4.png" alt="빨간쌀 제품 라인" />
+          </div>
+          <div class="product-scene product-scene-reveal">
+            <img src="./assets/products-5.png" alt="달빛유자 제품 라인" />
+          </div>
+          <div class="product-scene product-scene-reveal">
+            <img src="./assets/products-6.png" alt="어린쑥 제품 라인" />
+          </div>
+
+          <div class="products-copy">
+            <div class="products-pagination" aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span>
+            </div>
+            <h2>한국 자연의 결,<br />피부에 스미다</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog" aria-labelledby="catalog-title">
+        <img class="catalog-bg" src="./assets/catalog-bg.png" alt="" />
+        <h2 id="catalog-title">한율의 대표적인 제품</h2>
+
+        <div class="catalog-track" tabindex="0" aria-label="대표 제품 목록">
+          <article class="catalog-card">
+            <p>#유분잡는 수분세럼</p><h3>어린쑥 속수분<br />쑥히알 세럼</h3>
+            <div class="catalog-product"><img src="./assets/catalog-product-1.png" alt="어린쑥 속수분 쑥히알 세럼" /></div>
+          </article>
+          <article class="catalog-card">
+            <p>#화잘먹 수분크림</p><h3>어린쑥 속수분<br />쑥히알 크림</h3>
+            <div class="catalog-product"><img src="./assets/catalog-product-2.png" alt="어린쑥 속수분 쑥히알 크림" /></div>
+          </article>
+          <article class="catalog-card">
+            <p>#피지흡착 클렌징</p><h3>어린쑥<br />클렌징 흡착 팩폼</h3>
+            <div class="catalog-product"><img src="./assets/catalog-product-3.png" alt="어린쑥 클렌징 흡착 팩폼" /></div>
+          </article>
+          <article class="catalog-card">
+            <p>#쑥시카 수분크림</p><h3>어린쑥<br />수분 진정크림</h3>
+            <div class="catalog-product"><img src="./assets/catalog-product-4.png" alt="어린쑥 수분 진정크림" /></div>
+          </article>
+          <article class="catalog-card">
+            <p>#바르는비타민세럼</p><h3>달빛유자C<br />세럼</h3>
+            <div class="catalog-product"><img src="./assets/catalog-product-5.png" alt="달빛유자C 세럼" /></div>
+          </article>
+          <article class="catalog-card">
+            <p>#톤결광 수면팩</p><h3>달빛유자<br />수면팩</h3>
+            <div class="catalog-product"><img src="./assets/catalog-product-6.png" alt="달빛유자 수면팩" /></div>
+          </article>
+          <article class="catalog-card">
+            <p>#속당김 1초 해결템</p><h3>빨간쌀<br />보습탄력 에센스</h3>
+            <div class="catalog-product"><img src="./assets/catalog-product-7.png" alt="빨간쌀 보습탄력 에센스" /></div>
+          </article>
+          <article class="catalog-card">
+            <p>#속보습 속탄력 크림</p><h3>빨간쌀<br />보습탄력 크림</h3>
+            <div class="catalog-product"><img src="./assets/catalog-product-8.png" alt="빨간쌀 보습탄력 크림" /></div>
+          </article>
+        </div>
+
+        <div class="catalog-controls">
+          <button class="catalog-prev" type="button" aria-label="이전 제품"><img class="arrow-default" src="./assets/catalog-arrow-default.svg" alt="" /><img class="arrow-hover" src="./assets/catalog-arrow-hover.svg" alt="" /></button>
+          <button class="catalog-next" type="button" aria-label="다음 제품"><img class="arrow-default" src="./assets/catalog-arrow-default.svg" alt="" /><img class="arrow-hover" src="./assets/catalog-arrow-hover.svg" alt="" /></button>
+        </div>
+      </section>
+
+      <section class="brand-photo" aria-label="한율 브랜드 이미지">
+        <img class="brand-photo-bg" src="./assets/photo-section-bg.png" alt="한율 제품과 유리 공예 오브제" />
+        <img class="brand-photo-wordmark" src="./assets/photo-section-wordmark.png" alt="HANYUL" />
+      </section>
+
+      <section class="official-benefits" aria-labelledby="official-benefits-title">
+        <h2 id="official-benefits-title">오직 한율 공식몰에서</h2>
+        <div class="benefit-list">
+          <article class="benefit-item">
+            <div class="benefit-icon"><img src="./assets/benefit-coupon.png" alt="" /></div>
+            <p>신규 회원 혜택</p><strong>15% 쿠폰</strong>
+          </article>
+          <article class="benefit-item">
+            <div class="benefit-icon"><img src="./assets/benefit-shipping.png" alt="" /></div>
+            <p>전제품</p><strong>무료배송</strong>
+          </article>
+          <article class="benefit-item">
+            <div class="benefit-icon"><img src="./assets/benefit-sample.png" alt="" /></div>
+            <p>구매 금액별</p><strong>샘플 증정</strong>
+          </article>
+          <article class="benefit-item">
+            <div class="benefit-icon"><img src="./assets/benefit-authentic.png" alt="" /></div>
+            <p>정품보장</p><strong>안심 쇼핑</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="story-reveal" aria-label="한율의 변하지 않는 가치">
+        <div class="story-reveal-sticky">
+          <img class="story-reveal-bg" src="./assets/story-reveal-bg.png" alt="한국 자연을 표현한 산수 풍경" />
+          <div class="story-reveal-copy">
+            <p class="story-detail">한국의 땅에서 자란 귀한 재료로 피부를 건강하게 가꾸어 줍니다</p>
+            <h2 class="story-title story-title-left">한국자연의힘을담다</h2>
+            <h2 class="story-title story-title-right">오랜시간,변치않는가치</h2>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-shop">
+        <p class="footer-label">APMALL</p>
+        <p class="footer-message">지금은 한율과 함께<br />아름다워지는 시간입니다.</p>
+        <a class="footer-shop-link" href="#shopping">한율제품 구매하기</a>
+      </div>
+
+      <div class="footer-social" aria-label="한율 소셜 미디어">
+        <a href="#" aria-label="인스타그램"><img src="./assets/footer-instagram.svg" alt="" /></a>
+        <a href="#" aria-label="틱톡"><img src="./assets/footer-tiktok.svg" alt="" /></a>
+        <a href="#" aria-label="유튜브"><img src="./assets/footer-youtube.svg" alt="" /></a>
+        <a href="#" aria-label="트위터"><img src="./assets/footer-twitter.svg" alt="" /></a>
+        <a href="#" aria-label="페이스북"><img src="./assets/footer-facebook.svg" alt="" /></a>
+      </div>
+
+      <div class="footer-service">
+        <p>고객서비스 센터(수신자요금부담)</p>
+        <strong>080.023.5454</strong>
+        <p>상담시간 AM 9:00 ~ PM 6:00<br />(*주말/공휴일 휴무)</p>
+      </div>
+
+      <img class="footer-wordmark" src="./assets/photo-section-wordmark.png" alt="HANYUL" />
+
+      <div class="footer-bottom">
+        <nav aria-label="푸터 메뉴">
+          <a href="#">영상정보처리기기 운영 및 관리 방침</a>
+          <a href="#">서비스이용약관</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">뷰티포인트</a>
+          <a href="#">사이트맵</a>
+        </nav>
+        <p>ⓒ AMOREPACIFIC CORPORATION. All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

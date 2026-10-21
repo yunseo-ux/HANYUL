@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>쇼핑 | 한율</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./shop.css" />
+  <script src="./shop-data.js" defer></script>
+  <script src="./shop.js" defer></script>
+</head>
+<body class="shop-page">
+<header class="site-header" aria-label="주요 메뉴">
+            <a class="brand" href="./index.html" aria-label="한율 홈">
+                <img src="./assets/logo.png" alt="한율" />
+            </a>
+
+            <nav class="primary-nav" aria-label="주요 내비게이션">
+                <a href="./shop.html">쇼핑</a>
+                <a href="./brand.html">브랜드</a>
+                <a href="./index.html#diagnosis">피부진단</a>
+                <a href="./index.html#support">고객센터</a>
+                <a class="mobile-account-link" href="./mypage.html">마이페이지</a>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" aria-label="검색">
+                    <img src="./assets/search.svg" alt="" />
+                </button>
+                <a href="./mypage.html" aria-label="마이페이지">
+                    <img src="./assets/person.svg" alt="" />
+                </a>
+                <button type="button" aria-label="장바구니">
+                    <img src="./assets/shopping-bag.svg" alt="" />
+                </button>
+            </div>
+
+            <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+<main id="shopping">
+  <section class="shop-heading" aria-label="쇼핑 카테고리">
+    <h1>홈</h1>
+    <nav class="shop-tabs" aria-label="상품 분류">
+      <button type="button" data-category="all">ALL</button>
+      <button type="button" data-category="best" aria-current="page">BEST</button>
+      <button type="button" data-category="sale">할인</button>
+      <button type="button" data-category="new">신상소개</button>
+    </nav>
+  </section>
+  <section class="shop-list" aria-label="한율 상품 목록">
+    <div class="shop-toolbar">
+      <p id="shop-count" role="status">12개의 상품</p>
+      <div class="shop-filters">
+        <div class="shop-select"><span>피부고민</span><img src="./assets/shop/imgWeuiArrowOutlined.svg" alt="" /></div>
+        <div class="shop-select"><span>추천순</span><img src="./assets/shop/imgWeuiArrowOutlined.svg" alt="" /></div>
+      </div>
+    </div>
+    <div class="shop-grid" id="shop-grid"></div>
+    <p class="shop-empty" id="shop-empty" hidden>해당 조건의 상품이 없습니다.</p>
+    <nav class="shop-pagination" aria-label="상품 페이지"><button type="button" aria-current="page" aria-label="1페이지">1</button></nav>
+  </section>
+</main>
+<footer class="site-footer">
+            <div class="footer-shop">
+                <p class="footer-label">APMALL</p>
+                <p class="footer-message">지금은 한율과 함께<br />아름다워지는 시간입니다.</p>
+                <a class="footer-shop-link" href="./shop.html">한율제품 구매하기</a>
+            </div>
+
+            <div class="footer-social" aria-label="한율 소셜 미디어">
+                <a href="#" aria-label="인스타그램"
+                    ><img src="./assets/footer-instagram.svg" alt=""
+                /></a>
+                <a href="#" aria-label="틱톡"><img src="./assets/footer-tiktok.svg" alt="" /></a>
+                <a href="#" aria-label="유튜브"><img src="./assets/footer-youtube.svg" alt="" /></a>
+                <a href="#" aria-label="트위터"><img src="./assets/footer-twitter.svg" alt="" /></a>
+                <a href="#" aria-label="페이스북"
+                    ><img src="./assets/footer-facebook.svg" alt=""
+                /></a>
+            </div>
+
+            <div class="footer-service">
+                <p>고객서비스 센터(수신자요금부담)</p>
+                <strong>080.023.5454</strong>
+                <p>상담시간 AM 9:00 ~ PM 6:00<br />(*주말/공휴일 휴무)</p>
+            </div>
+
+            <img class="footer-wordmark" src="./assets/photo-section-wordmark.png" alt="HANYUL" />
+
+            <div class="footer-bottom">
+                <nav aria-label="푸터 메뉴">
+                    <a href="#">영상정보처리기기 운영 및 관리 방침</a>
+                    <a href="#">서비스이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">뷰티포인트</a>
+                    <a href="#">사이트맵</a>
+                </nav>
+                <p>ⓒ AMOREPACIFIC CORPORATION. All rights reserved</p>
+            </div>
+        </footer>
+</body>
+</html>

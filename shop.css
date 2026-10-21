@@ -1,0 +1,52 @@
+.shop-page { background: #fff; color: #000; }
+.shop-page .site-header { position: relative; top: 0; width: 100%; max-width: none; height: 80px; padding: 0 7.8%; border-radius: 0; background: #554d46; backdrop-filter: none; }
+.shop-page .primary-nav { gap: 54px; }
+.shop-page .primary-nav a { font-size: 20px; }
+.shop-heading { height: 160px; text-align: center; }
+.shop-heading h1 { margin: 0; padding-top: 30px; font-family: "Arita Buri", "Noto Serif KR", serif; font-size: 25px; font-weight: 600; }
+.shop-tabs { display: flex; justify-content: center; gap: 72px; margin-top: 34px; }
+.shop-tabs button { padding: 0 0 4px; border: 0; border-bottom: 1px solid transparent; background: none; font-size: 18px; color: #000; cursor: pointer; }
+.shop-tabs button[aria-current] { border-bottom-color: #000; font-weight: 600; }
+.shop-list { max-width: 1370px; margin: auto; padding: 70px 0 0; }
+.shop-toolbar { display: flex; justify-content: space-between; align-items: center; padding: 0 3px; margin-bottom: 22px; min-height: 45px; }
+.shop-toolbar p { margin: 0; font-size: 18px; }
+.shop-filters { display: flex; gap: 19px; }
+.shop-select { display: flex; position: relative; align-items: center; background: #766e67; border-radius: 45px; }
+.shop-select > span { color: white; min-width: 130px; padding: 12px 42px 12px 22px; font: inherit; font-size: 18px; cursor: default; }
+.shop-select:first-child > span { min-width: 150px; }
+.shop-select img { position: absolute; right: 16px; width: 17px; height: 34px; transform: rotate(90deg); pointer-events: none; }
+.shop-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 90px 22px; }
+.shop-item { position: relative; aspect-ratio: 326 / 510; min-width: 0; }
+.shop-card-canvas { transform: scale(var(--card-scale, 1)); transform-origin: top left; }
+.shop-card-canvas p { margin: 0; }
+.shop-card-canvas img { display: block; }
+.shop-image-viewport { position: absolute; top: 5px; left: 3px; width: 320px; height: 385px; border-radius: 15px; overflow: hidden; }
+.shop-image-content { position: absolute; top: -5px; left: -3px; width: 326px; height: 510px; transform-origin: 163px 197.5px; transition: transform 450ms cubic-bezier(0.2, 0.65, 0.3, 1); }
+@media (hover: hover) and (pointer: fine) {
+  .shop-image-viewport:hover .shop-image-content { transform: scale(1.03); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shop-image-content { transition: none; }
+}
+.shop-pagination { display: flex; justify-content: center; gap: 40px; padding: 205px 0 115px; }
+.shop-pagination button { border: 0; background: none; color: #222; font: inherit; font-size: 18px; }
+.shop-empty { text-align: center; padding: 100px 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.shop-page button:focus-visible, .shop-page a:focus-visible, .shop-page select:focus-visible { outline: 2px solid #5486c1; outline-offset: 5px; }
+@media (max-width: 1550px) { .shop-list { margin: 0 7%; } }
+@media (max-width: 1100px) { .shop-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 55px 20px; } .shop-page .primary-nav { gap: 28px; } .shop-page .primary-nav a { font-size: 16px; } }
+@media (max-width: 760px) {
+  .shop-page .site-header { top: 0; height: 72px; padding: 0 24px; }
+  .shop-page .primary-nav.is-open { z-index: 20; }
+  .shop-heading { height: 145px; }
+  .shop-tabs { gap: 32px; margin-top: 25px; }
+  .shop-tabs button { font-size: 15px; }
+  .shop-list { margin: 0 20px; padding-top: 30px; }
+  .shop-toolbar { gap: 12px; margin-bottom: 22px; }
+  .shop-toolbar p { font-size: 13px; white-space: nowrap; }
+  .shop-filters { gap: 6px; }
+  .shop-select > span, .shop-select:first-child > span { min-width: 88px; font-size: 12px; padding: 10px 24px 10px 12px; max-width: 120px; }
+  .shop-select img { right: 7px; width: 10px; height: 20px; }
+  .shop-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 35px 10px; }
+  .shop-pagination { padding: 70px 0; }
+}

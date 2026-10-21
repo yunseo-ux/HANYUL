@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마이페이지 | 한율</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./pages.css" />
+  <link rel="stylesheet" href="./mypage.css" />
+  <script src="./pages.js" defer></script>
+</head>
+<body class="inner-page account-page">
+<header class="site-header" aria-label="주요 메뉴">
+            <a class="brand" href="./index.html" aria-label="한율 홈">
+                <img src="./assets/logo.png" alt="한율" />
+            </a>
+
+            <nav class="primary-nav" aria-label="주요 내비게이션">
+                <a href="./shop.html">쇼핑</a>
+                <a href="./brand.html">브랜드</a>
+                <a href="./index.html#diagnosis">피부진단</a>
+                <a href="./index.html#support">고객센터</a>
+                <a class="mobile-account-link" href="./mypage.html">마이페이지</a>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" aria-label="검색">
+                    <img src="./assets/search.svg" alt="" />
+                </button>
+                <a href="./mypage.html" aria-label="마이페이지">
+                    <img src="./assets/person.svg" alt="" />
+                </a>
+                <button type="button" aria-label="장바구니">
+                    <img src="./assets/shopping-bag.svg" alt="" />
+                </button>
+            </div>
+
+            <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+<main class="account-main">
+  <h1>마이페이지</h1>
+  <div class="account-layout">
+    <aside class="account-sidebar" aria-label="마이페이지 메뉴">
+      <div class="account-menu-group"><h2>쇼핑정보</h2>
+        <a href="#recent-orders"><span class="account-menu-icon"><img src="./assets/mypage/imgGroup.svg" alt="" /></span>주문내역</a>
+        <a href="#order-status"><span class="account-menu-icon"><img src="./assets/mypage/imgGroup1.svg" alt="" /></span>배송조회</a>
+        <a href="#order-summary"><span class="account-menu-icon"><img src="./assets/mypage/imgCarbonIbmDataProductExchange.svg" alt="" /></span>교환/환불</a>
+      </div>
+      <img class="account-menu-divider" src="./assets/mypage/imgLine7.svg" alt="" />
+      <div class="account-menu-group"><h2>혜택</h2>
+        <a href="#member-benefits"><span class="account-menu-icon"><img src="./assets/mypage/imgGroup2.svg" alt="" /></span>쿠폰</a>
+        <a href="#member-benefits"><span class="account-menu-icon"><img src="./assets/mypage/imgGroup3.svg" alt="" /></span>포인트</a>
+        <a href="#recent-products"><span class="account-menu-icon"><img src="./assets/mypage/imgMdiLightHeart.svg" alt="" /></span>찜한 상품</a>
+      </div>
+      <img class="account-menu-divider" src="./assets/mypage/imgLine7.svg" alt="" />
+      <div class="account-menu-group"><h2>정보</h2>
+        <span><span class="account-menu-icon"><img src="./assets/mypage/imgGroup4.svg" alt="" /></span>회원정보</span>
+        <span><span class="account-menu-icon"><img src="./assets/mypage/imgPhAddressBook.svg" alt="" /></span>배송자 관리</span>
+        <span><span class="account-menu-icon"><img src="./assets/mypage/imgGroup5.svg" alt="" /></span>비밀번호 변경</span>
+      </div>
+    </aside>
+    <div class="account-content">
+      <section class="account-welcome" aria-label="회원 요약">
+        <p class="welcome-intro">안녕하세요, 한율과 함께하는</p>
+        <h2>김한율님</h2>
+        <p class="welcome-message">오늘도 한율의 자연을 만나보세요.</p>
+        <div class="member-benefits" id="member-benefits">
+          <div><span class="benefit-summary-icon"><img src="./assets/mypage/imgGroup6.svg" alt="" /></span><div><p>보유 쿠폰</p><strong>2<small>장</small></strong></div></div>
+          <div><span class="benefit-summary-icon"><img src="./assets/mypage/imgGroup7.svg" alt="" /></span><div><p>보유 포인트</p><strong>3,000<small>p</small></strong></div></div>
+          <div><span class="benefit-summary-icon"><img src="./assets/mypage/imgSolarBoxLinear.svg" alt="" /></span><div><p>진행 중 주문</p><strong>2<small>건</small></strong></div></div>
+        </div>
+      </section>
+      <section class="account-section" id="order-status" aria-labelledby="order-status-title">
+        <div class="account-section-heading"><h2 id="order-status-title">주문 진행 현황</h2><p>최근 30일 내에 진행중인 주문정보입니다.</p></div>
+        <div class="account-status-layout">
+          <div class="order-progress">
+            <div class="order-progress-line"><img src="./assets/mypage/imgCurrentSituationBar.svg" alt="" /></div>
+            <div><span class="order-step-icon"><img src="./assets/mypage/imgGroup8.svg" alt="" /></span><p>입금대기</p></div>
+            <div><span class="order-step-icon"><img src="./assets/mypage/imgIcOutlineShoppingBag.svg" alt="" /></span><p>결제완료</p></div>
+            <div><span class="order-step-icon"><img src="./assets/mypage/imgSolarBoxLinear1.svg" alt="" /></span><p>상품준비중</p></div>
+            <div class="is-current"><span class="order-step-icon"><img src="./assets/mypage/imgGroup1.svg" alt="" /></span><p>배송중</p></div>
+            <div><span class="order-step-icon"><img src="./assets/mypage/imgGroup9.svg" alt="" /></span><p>배송완료</p></div>
+          </div>
+          <dl class="order-summary" id="order-summary">
+            <div><dt>입금대기</dt><dd>0</dd></div><div><dt>배송 중</dt><dd>1</dd></div><div><dt>배송 완료</dt><dd>2</dd></div><div><dt>취소/교환/환불</dt><dd>0</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="account-section" id="recent-orders" aria-labelledby="recent-orders-title">
+        <div class="account-section-heading"><h2 id="recent-orders-title">최근 주문 정보</h2><p>최근 30일 내에 주문하신 내역입니다.</p><span class="account-more">더보기<img src="./assets/mypage/imgWeuiArrowOutlined.svg" alt="" /></span></div>
+        <div class="account-orders-table">
+          <table><thead><tr><th scope="col">주문번호</th><th scope="col">상품 정보</th><th scope="col">주문 금액</th><th scope="col">주문 상태</th><th scope="col">주문 일자</th><th scope="col">주문 상세</th></tr></thead>
+            <tbody>
+              <tr><td>2024-05-24-0000102</td><td>어린쑥 수분진정 세트</td><td>36,000원</td><td class="order-in-transit">배송중</td><td>2024.05.23</td><td><button type="button" class="order-detail">상세보기</button></td></tr>
+              <tr><td>2024-05-20-0000982</td><td>달빛 유자 클렌징 폼</td><td>18,000원</td><td>배송완료</td><td>2024.05.22</td><td><button type="button" class="order-detail">상세보기</button></td></tr>
+              <tr><td>2024-05-18-0001009</td><td>어린쑥 수분진정 크림</td><td>28,000원</td><td>배송완료</td><td>2024.05.20</td><td><button type="button" class="order-detail">상세보기</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="account-section account-recent" id="recent-products" aria-labelledby="recent-products-title">
+        <div class="account-section-heading"><h2 id="recent-products-title">최근 본 상품</h2><p>최근 일주일 내에 확인하신 상품입니다.</p><a class="account-more" href="./shop.html">더보기<img src="./assets/mypage/imgWeuiArrowOutlined.svg" alt="" /></a></div>
+        <div class="recent-carousel">
+          <button type="button" class="recent-prev" aria-label="이전 상품"><img src="./assets/mypage/imgWeuiArrowOutlined2.svg" alt="" /></button>
+          <div class="recent-product-track">
+            <article class="recent-product"><button class="favorite-button" type="button" aria-pressed="false" aria-label="어린쑥 수분진정 크림 찜하기"><img src="./assets/mypage/imgMdiLightHeart1.svg" alt="" /></button><img class="recent-product-image" src="./assets/mypage/imgProductImg.png" alt="어린쑥 수분진정 크림" /><h3>어린쑥 수분진정 크림</h3><p>28,000<small>원</small></p></article>
+            <article class="recent-product"><button class="favorite-button" type="button" aria-pressed="false" aria-label="달빛 유자 클렌징 폼 찜하기"><img src="./assets/mypage/imgMdiLightHeart1.svg" alt="" /></button><img class="recent-product-image" src="./assets/mypage/imgProductImg1.png" alt="달빛 유자 클렌징 폼" /><h3>달빛 유자 클렌징 폼</h3><p>18,000<small>원</small></p></article>
+            <article class="recent-product"><button class="favorite-button" type="button" aria-pressed="false" aria-label="어린쑥 수분진정 토너 찜하기"><img src="./assets/mypage/imgMdiLightHeart1.svg" alt="" /></button><img class="recent-product-image" src="./assets/mypage/imgProductImg2.png" alt="어린쑥 수분진정 토너" /><h3>어린쑥 수분진정 토너</h3><p>26,000<small>원</small></p></article>
+            <article class="recent-product"><button class="favorite-button" type="button" aria-pressed="false" aria-label="극진 스킨 찜하기"><img src="./assets/mypage/imgMdiLightHeart1.svg" alt="" /></button><img class="recent-product-image" src="./assets/mypage/imgProductImg3.png" alt="극진 스킨" /><h3>극진 스킨</h3><p>65,700<small>원</small></p></article>
+            <article class="recent-product"><button class="favorite-button" type="button" aria-pressed="false" aria-label="빨간쌀 보습탄력 에센스 찜하기"><img src="./assets/mypage/imgMdiLightHeart1.svg" alt="" /></button><img class="recent-product-image" src="./assets/mypage/imgProductImg4.png" alt="빨간쌀 보습탄력 에센스" /><h3>빨간쌀 보습탄력 에센스</h3><p>32,000<small>원</small></p></article>
+          </div>
+          <button type="button" class="recent-next" aria-label="다음 상품"><img src="./assets/mypage/imgWeuiArrowOutlined1.svg" alt="" /></button>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+            <div class="footer-shop">
+                <p class="footer-label">APMALL</p>
+                <p class="footer-message">지금은 한율과 함께<br />아름다워지는 시간입니다.</p>
+                <a class="footer-shop-link" href="./shop.html">한율제품 구매하기</a>
+            </div>
+
+            <div class="footer-social" aria-label="한율 소셜 미디어">
+                <a href="#" aria-label="인스타그램"
+                    ><img src="./assets/footer-instagram.svg" alt=""
+                /></a>
+                <a href="#" aria-label="틱톡"><img src="./assets/footer-tiktok.svg" alt="" /></a>
+                <a href="#" aria-label="유튜브"><img src="./assets/footer-youtube.svg" alt="" /></a>
+                <a href="#" aria-label="트위터"><img src="./assets/footer-twitter.svg" alt="" /></a>
+                <a href="#" aria-label="페이스북"
+                    ><img src="./assets/footer-facebook.svg" alt=""
+                /></a>
+            </div>
+
+            <div class="footer-service">
+                <p>고객서비스 센터(수신자요금부담)</p>
+                <strong>080.023.5454</strong>
+                <p>상담시간 AM 9:00 ~ PM 6:00<br />(*주말/공휴일 휴무)</p>
+            </div>
+
+            <img class="footer-wordmark" src="./assets/photo-section-wordmark.png" alt="HANYUL" />
+
+            <div class="footer-bottom">
+                <nav aria-label="푸터 메뉴">
+                    <a href="#">영상정보처리기기 운영 및 관리 방침</a>
+                    <a href="#">서비스이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">뷰티포인트</a>
+                    <a href="#">사이트맵</a>
+                </nav>
+                <p>ⓒ AMOREPACIFIC CORPORATION. All rights reserved</p>
+            </div>
+        </footer>
+<dialog class="order-dialog" aria-labelledby="order-dialog-title"><h2 id="order-dialog-title">주문 상세</h2><dl id="order-dialog-content"></dl><form method="dialog"><button type="submit">닫기</button></form></dialog>
+</body>
+</html>

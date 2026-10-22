@@ -2,7 +2,6 @@
 html:has(.brand-page) { scrollbar-gutter: stable; }
 html.brand-intro-playing,
 html.brand-intro-playing body { overflow: hidden; }
-.inner-page .site-header { position: relative; top: 0; width: 100%; max-width: none; height: 80px; padding: 0 7.8%; border-radius: 0; background: #554d46; backdrop-filter: none; }
 .inner-page .primary-nav { gap: 54px; }
 .inner-page .primary-nav a { font-size: 18px; }
 .header-actions a { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; }
@@ -10,7 +9,6 @@ html.brand-intro-playing body { overflow: hidden; }
 .inner-page h1, .inner-page h2, .inner-page h3, .inner-page p { margin: 0; }
 .inner-page button, .inner-page a { -webkit-tap-highlight-color: transparent; }
 .inner-page button:focus-visible, .inner-page a:focus-visible { outline: 2px solid #5486c1; outline-offset: 5px; }
-.brand-page .site-header { position: absolute; z-index: 5; }
 .brand-story-hero { position: relative; aspect-ratio: 1920 / 1075; }
 .story-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .story-hero-copy { position: absolute; top: 35.63%; left: 50%; width: 40%; transform: translateX(-50%); text-align: center; }
@@ -89,7 +87,6 @@ html.brand-intro-playing body { overflow: hidden; }
   .story-absorption-copy { padding: 50px 5vw; }
 }
 @media (max-width: 760px) {
-  .inner-page .site-header { height: 72px; padding: 0 24px; }
   .inner-page .primary-nav.is-open { z-index: 20; }
   .brand-story-hero { min-height: 600px; aspect-ratio: auto; }
   .story-hero-image { object-position: 50% center; }

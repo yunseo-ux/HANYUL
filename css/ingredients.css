@@ -1,12 +1,12 @@
 .ingredients-page { color: #1a202c; background: #fff; }
-.ingredients-hero { position: relative; height: clamp(620px, 45.833333vw, 880px); overflow: hidden; background: #64745a; }
+.ingredients-hero { position: relative; height: clamp(700px, 50vw, 960px); overflow: hidden; background: #64745a; }
 .ingredients-hero-image { position: absolute; inset: 0; overflow: hidden; }
 .ingredients-hero-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .ingredients-hero-image img { opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility .2s; }
 .ingredients-hero-image img.is-active { opacity: 1; visibility: visible; }
 .ingredients-progress { position: absolute; left: 50%; bottom: 28px; width: min(80%, 311px); height: 5px; border: 1px solid #fff; transform: translateX(-50%); pointer-events: none; }
 .ingredients-progress span { display: block; width: 0; height: 100%; background: #fff; }
-.ingredients-hero-content { position: relative; display: flex; flex-direction: column; align-items: center; height: 100%; padding: clamp(45px, 4.7396vw, 91px) 20px 30px; color: #fff; }
+.ingredients-hero-content { position: relative; display: flex; flex-direction: column; align-items: center; height: 100%; padding: clamp(125px, 8.90625vw, 171px) 20px 30px; color: #fff; }
 .ingredients-brand { display: flex; flex-direction: column; align-items: center; gap: 13px; }
 .ingredients-brand > img { width: clamp(140px, 9.8958vw, 190px); height: auto; }
 .ingredients-brand h1 { font-size: clamp(18px, 1.25vw, 24px); font-weight: 600; line-height: 1.2; }
@@ -54,7 +54,7 @@
 @media (max-width: 760px) {
   .ingredients-hero { height: 690px; }
   .ingredients-hero-image img { object-fit: cover !important; }
-  .ingredients-hero-content { padding-top: 45px; }
+  .ingredients-hero-content { padding-top: 110px; }
   .ingredients-menu { margin-top: 65px; gap: 12px; }
   .ingredients-menu button { font-size: 24px; }
   .ingredients-menu button[aria-pressed="true"] { font-size: clamp(32px, 8vw, 42px); }

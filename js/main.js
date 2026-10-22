@@ -61,24 +61,26 @@ if (brandPhotoSection && photoWordmark) {
   renderWordmark();
 }
 
-const hoverVideo = document.querySelector('.wave-video video');
-const hoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+const brandVideo = document.querySelector('.wave-video video');
 
-if (hoverVideo) {
-  let resumeAfterHover = false;
-  hoverVideo.addEventListener('pointerenter', () => {
-    if (!hoverPointer.matches) return;
-    resumeAfterHover = !hoverVideo.paused;
-    hoverVideo.pause();
-  });
-  const resumeVideo = () => {
-    if (resumeAfterHover) {
-      hoverVideo.play().catch(() => {});
-      resumeAfterHover = false;
-    }
+if (brandVideo) {
+  // Keep the product film running even while the pointer rests over it.
+  brandVideo.muted = true;
+  const playBrandVideo = () => {
+    if (document.hidden || !brandVideo.paused) return;
+    brandVideo.play().catch(() => {
+      // Autoplay can be deferred until media is ready or the user interacts.
+    });
   };
-  hoverVideo.addEventListener('pointerleave', resumeVideo);
-  hoverVideo.addEventListener('pointercancel', resumeVideo);
+  brandVideo.addEventListener('canplay', playBrandVideo);
+  window.addEventListener('pageshow', playBrandVideo);
+  document.addEventListener('visibilitychange', playBrandVideo);
+  document.addEventListener('pointerdown', playBrandVideo, { once: true });
+  const videoObserver = new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting)) playBrandVideo();
+  });
+  videoObserver.observe(brandVideo);
+  playBrandVideo();
 }
 
 const productInkCharacters = new Map();
@@ -183,109 +185,6 @@ inkTitles.forEach((introTitle) => {
   document.fonts.ready.then(requestIntroInk);
   updateIntroInk();
 });
-
-const brandKo = document.querySelector('.brand-ko');
-const brandHanja = document.querySelector('.brand-hanja');
-const hanjaHan = document.querySelector('.hanja-han');
-const hanjaRyul = document.querySelector('.hanja-ryul');
-const koInkMain = document.querySelector('.brand-ko .ink-main');
-const hanInkMain = document.querySelector('.hanja-han .ink-main');
-const ryulInkMain = document.querySelector('.hanja-ryul .ink-main');
-const waterBlob = document.querySelector('.water-blob');
-const marqueeTracks = [...document.querySelectorAll('.hero-marquee-track')];
-
-if (heroSection && brandKo && brandHanja && hanjaHan && hanjaRyul && koInkMain && hanInkMain && ryulInkMain && waterBlob && marqueeTracks.length) {
-  if (reduceMotion.matches || typeof window.gsap === 'undefined' || typeof window.ScrollTrigger === 'undefined') {
-    brandKo.style.opacity = '0';
-    brandHanja.style.opacity = '1';
-    hanjaHan.style.opacity = '1';
-    hanjaHan.style.filter = 'none';
-    hanjaRyul.style.opacity = '1';
-    hanjaRyul.style.filter = 'none';
-  } else {
-    window.gsap.registerPlugin(window.ScrollTrigger);
-    window.gsap.set(marqueeTracks[1], { xPercent: -22 });
-    window.gsap.set(brandHanja, { opacity: 0, scale: 0.96 });
-    window.gsap.set(brandKo, { '--bleed-opacity': 0.12 });
-    window.gsap.set(hanjaHan, {
-      x: () => -Math.min(window.innerWidth * 0.22, 320),
-      y: -28,
-      rotation: -3,
-      opacity: 0,
-      filter: 'blur(24px)',
-      '--bleed-opacity': 0.34,
-    });
-    window.gsap.set(hanjaRyul, {
-      x: () => Math.min(window.innerWidth * 0.22, 320),
-      y: 32,
-      rotation: 3,
-      opacity: 0,
-      filter: 'blur(24px)',
-      '--bleed-opacity': 0.34,
-    });
-
-    window.gsap.timeline({
-      defaults: { ease: 'power2.inOut' },
-      scrollTrigger: {
-        trigger: heroSection,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: true,
-        invalidateOnRefresh: true,
-      },
-    })
-      .to(marqueeTracks[0], { xPercent: -22, ease: 'none', duration: 6 }, 0)
-      .to(marqueeTracks[1], { xPercent: 0, ease: 'none', duration: 6 }, 0)
-      .from(brandKo, {
-        opacity: 0,
-        filter: 'blur(14px)',
-        scale: 0.94,
-        '--bleed-opacity': 0.04,
-        duration: 1,
-      }, 0.15)
-      .from(koInkMain, { backgroundPosition: '8% 22%', duration: 1 }, 0.15)
-      .to(brandKo, { '--bleed-opacity': 0.22, duration: 0.75 }, 0.35)
-      .to(waterBlob, { opacity: 1, scale: 1.12, duration: 1.25 }, 1.05)
-      .to(brandKo, {
-        opacity: 0,
-        filter: 'blur(26px)',
-        letterSpacing: '0.38em',
-        scale: 1.1,
-        '--bleed-opacity': 0.38,
-        ease: 'power2.inOut',
-        duration: 1.7,
-      }, 1.35)
-      .to(koInkMain, { backgroundPosition: '86% 72%', ease: 'power2.inOut', duration: 1.7 }, 1.35)
-      .to(brandHanja, { opacity: 1, duration: 0.35 }, 2.75)
-      .to(hanjaHan, {
-        x: 0,
-        y: 0,
-        rotation: 0,
-        opacity: 1,
-        filter: 'blur(0px)',
-        '--bleed-opacity': 0.2,
-        ease: 'power2.inOut',
-        duration: 2.15,
-      }, 2.7)
-      .to(hanInkMain, { backgroundPosition: '18% 28%', ease: 'power2.inOut', duration: 2.15 }, 2.7)
-      .to(hanjaRyul, {
-        x: 0,
-        y: 0,
-        rotation: 0,
-        opacity: 1,
-        filter: 'blur(0px)',
-        '--bleed-opacity': 0.2,
-        ease: 'power2.inOut',
-        duration: 2.15,
-      }, 2.92)
-      .to(ryulInkMain, { backgroundPosition: '76% 62%', ease: 'power2.inOut', duration: 2.15 }, 2.92)
-      .to(brandHanja, { scale: 1.03, ease: 'power2.out', duration: 0.42 }, 4.72)
-      .to(brandHanja, { scale: 1, ease: 'power2.inOut', duration: 0.55 }, 5.14)
-      .to(waterBlob, { opacity: 0.12, y: '12vh', scale: 1.24, duration: 1.6 }, 3.7);
-
-    window.addEventListener('load', () => window.ScrollTrigger.refresh(), { once: true });
-  }
-}
 
 if (brandPhotoSection && heroSection) {
   let headerTicking = false;
@@ -585,4 +484,53 @@ if (window.ScrollTrigger) {
   };
   refreshScrollLayout();
   document.fonts.ready.then(refreshScrollLayout);
+}
+
+// Product carousel keeps the native cursor and supports touch and keyboard input.
+if (heroSection?.classList.contains('product-hero')) {
+  const slides = [...heroSection.querySelectorAll('.hero-slide')];
+  const count = heroSection.querySelector('.hero-count');
+  let active = 0;
+  let paused = reduceMotion.matches;
+  let timer;
+  let touchStart = null;
+  const schedule = () => {
+    clearTimeout(timer);
+    if (!paused && !document.hidden && !heroSection.contains(document.activeElement)) {
+      timer = setTimeout(() => show(active + 1), 5500);
+    }
+  };
+  const show = (index) => {
+    active = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === active);
+      slide.setAttribute('aria-hidden', String(i !== active));
+    });
+    count.textContent = `${active + 1} / ${slides.length}`;
+    schedule();
+  };
+  heroSection.querySelector('.hero-prev').addEventListener('click', () => show(active - 1));
+  heroSection.querySelector('.hero-next').addEventListener('click', () => show(active + 1));
+
+  heroSection.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    show(active + (event.key === 'ArrowRight' ? 1 : -1));
+  });
+  heroSection.addEventListener('touchstart', (event) => {
+    touchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+  }, { passive: true });
+  heroSection.addEventListener('touchend', (event) => {
+    if (!touchStart) return;
+    const dx = event.changedTouches[0].clientX - touchStart.x;
+    const dy = event.changedTouches[0].clientY - touchStart.y;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(active + (dx < 0 ? 1 : -1));
+    touchStart = null;
+  }, { passive: true });
+  heroSection.addEventListener('touchcancel', () => { touchStart = null; });
+  heroSection.addEventListener('focusin', () => clearTimeout(timer));
+  heroSection.addEventListener('focusout', () => setTimeout(schedule, 0));
+  document.addEventListener('visibilitychange', schedule);
+  reduceMotion.addEventListener('change', () => { paused = reduceMotion.matches; schedule(); });
+  schedule();
 }

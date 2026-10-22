@@ -12,7 +12,8 @@
             defer
         ></script>
         <script src="./js/main.js" defer></script>
-    </head>
+      <link rel="stylesheet" href="./css/header.css" />
+</head>
     <body>
         <svg class="ink-filter-defs" width="0" height="0" aria-hidden="true">
             <filter id="inkBleed" x="-30%" y="-30%" width="160%" height="160%">
@@ -64,42 +65,42 @@
         </header>
 
         <main id="main">
-            <section class="hero" aria-label="한율 브랜드 메인 비주얼">
-                <div class="hero-sticky">
-                    <img
-                        class="hero-image"
-                        src="./assets/home/raw-1.png"
-                        alt="한옥과 자연 속에 놓인 한율 스킨케어 제품"
-                    />
-                    <div class="hero-marquee hero-marquee-top" aria-hidden="true">
-                        <div class="hero-marquee-track">
-                            <span>HANYUL</span><span>HANYUL</span><span>HANYUL</span
-                            ><span>HANYUL</span>
-                        </div>
-                    </div>
-                    <div class="brand-stage" aria-label="한율, 韓律">
-                        <span class="water-blob" aria-hidden="true"></span>
-                        <span class="brand-ko ink-word" aria-hidden="true">
-                            <span class="ink-bleed">한율</span>
-                            <span class="ink-main">한율</span>
-                        </span>
-                        <span class="brand-hanja" aria-hidden="true">
-                            <span class="hanja-char hanja-han ink-word">
-                                <span class="ink-bleed">韓</span><span class="ink-main">韓</span>
-                            </span>
-                            <span class="hanja-char hanja-ryul ink-word">
-                                <span class="ink-bleed">律</span><span class="ink-main">律</span>
-                            </span>
-                        </span>
-                    </div>
-                    <div class="hero-marquee hero-marquee-bottom" aria-hidden="true">
-                        <div class="hero-marquee-track">
-                            <span>HANYUL</span><span>HANYUL</span><span>HANYUL</span
-                            ><span>HANYUL</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <section class="hero product-hero" aria-label="한율 베스트 아이템" aria-roledescription="캐러셀" tabindex="0">
+  <div class="hero-slides">
+    <article class="hero-slide is-active" aria-label="1 / 3" aria-hidden="false">
+      <img class="hero-product-image" src="./assets/home/hero-yuja.png" alt="유자와 돌 위에 놓인 달빛유자 수면팩" fetchpriority="high" />
+      <div class="hero-product-copy">
+        <p class="hero-eyebrow">BEST ITEM</p>
+        <img class="hero-copy-rule" src="./assets/home/hero-yuja-line.svg" alt="" width="29" height="1" />
+        <h2>달빛유자 수면팩</h2>
+        <p class="hero-description">밤사이 맑고 생기 있게, 유자의 빛을 담다</p>
+      </div>
+    </article>
+    <article class="hero-slide" aria-label="2 / 3" aria-hidden="true">
+      <img class="hero-product-image" src="./assets/home/hero-rice-updated.png" alt="빨간쌀과 함께 놓인 한율 탄력 케어 제품" loading="eager" />
+      <div class="hero-product-copy">
+        <p class="hero-eyebrow">BEST ITEM</p>
+        <img class="hero-copy-rule" src="./assets/home/hero-rice-line.svg" alt="" width="29" height="1" />
+        <h2>빨간쌀 탄력 케어</h2>
+        <p class="hero-description">쌀의 깊은 영양으로, 피부에 탄탄한 생기를 채우다</p>
+      </div>
+    </article>
+    <article class="hero-slide" aria-label="3 / 3" aria-hidden="true">
+      <img class="hero-product-image" src="./assets/home/hero-mugwort.png" alt="어린쑥과 함께 놓인 수분진정 크림" loading="eager" />
+      <div class="hero-product-copy">
+        <p class="hero-eyebrow">BEST ITEM</p>
+        <img class="hero-copy-rule" src="./assets/home/hero-mugwort-line.svg" alt="" width="29" height="1" />
+        <h2>어린쑥 수분진정 크림</h2>
+        <p class="hero-description">어린쑥의 편안함으로, 지친 피부에 촉촉한 쉼을 선물하다</p>
+      </div>
+    </article>
+  </div>
+  <button type="button" class="hero-arrow hero-prev" aria-label="이전 배너"><span aria-hidden="true"></span></button>
+  <button type="button" class="hero-arrow hero-next" aria-label="다음 배너"><span aria-hidden="true"></span></button>
+  <div class="hero-controls" aria-label="배너 전환">
+    <span class="hero-count" aria-live="polite" aria-atomic="true">1 / 3</span>
+  </div>
+</section>
 
             <section class="brand-intro" id="brand-intro" aria-labelledby="brand-intro-title">
                 <div class="brand-intro-sticky">

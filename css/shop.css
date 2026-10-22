@@ -1,10 +1,9 @@
 .shop-page { background: #fff; color: #000; }
-.shop-page .site-header { position: relative; top: 0; width: 100%; max-width: none; height: 80px; padding: 0 7.8%; border-radius: 0; background: #554d46; backdrop-filter: none; }
 .shop-page .primary-nav { gap: 54px; }
 .shop-page .primary-nav a { font-size: 18px; }
 .shop-heading { height: 160px; text-align: center; }
 .shop-heading h1 { margin: 0; padding-top: 30px; font-family: "Arita Buri", "Noto Serif KR", serif; font-size: 25px; font-weight: 600; }
-.shop-tabs { display: flex; justify-content: center; gap: 72px; margin-top: 34px; }
+.shop-tabs { display: flex; justify-content: center; gap: 72px; margin-top: 54px; }
 .shop-tabs button { padding: 0 0 4px; border: 0; border-bottom: 1px solid transparent; background: none; font-size: 18px; color: #000; cursor: pointer; }
 .shop-tabs button[aria-current] { border-bottom-color: #000; font-weight: 600; }
 .shop-list { max-width: 1370px; margin: auto; padding: 70px 0 0; }
@@ -36,10 +35,9 @@
 @media (max-width: 1550px) { .shop-list { margin: 0 7%; } }
 @media (max-width: 1100px) { .shop-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 55px 20px; } .shop-page .primary-nav { gap: 28px; } .shop-page .primary-nav a { font-size: 16px; } }
 @media (max-width: 760px) {
-  .shop-page .site-header { top: 0; height: 72px; padding: 0 24px; }
   .shop-page .primary-nav.is-open { z-index: 20; }
   .shop-heading { height: 145px; }
-  .shop-tabs { gap: 32px; margin-top: 25px; }
+  .shop-tabs { gap: 32px; margin-top: 45px; }
   .shop-tabs button { font-size: 15px; }
   .shop-list { margin: 0 20px; padding-top: 30px; }
   .shop-toolbar { gap: 12px; margin-bottom: 22px; }

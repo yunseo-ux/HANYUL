@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Arita Buri";
+  src: url("../assets/fonts/arita-buri/AritaBuriKR-HairLine.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arita Buri";
+  src: url("../assets/fonts/arita-buri/AritaBuriKR-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arita Buri";
+  src: url("../assets/fonts/arita-buri/AritaBuriKR-Medium.ttf") format("truetype");
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arita Buri";
+  src: url("../assets/fonts/arita-buri/AritaBuriKR-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arita Buri";
+  src: url("../assets/fonts/arita-buri/AritaBuriKR-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arita Dotum KR";
+  src: url("../assets/fonts/arita-dotum/AritaDotumKR-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arita Dotum KR";
+  src: url("../assets/fonts/arita-dotum/AritaDotumKR-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arita Dotum KR";
+  src: url("../assets/fonts/arita-dotum/AritaDotumKR-Medium.ttf") format("truetype");
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arita Dotum KR";
+  src: url("../assets/fonts/arita-dotum/AritaDotumKR-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arita Dotum KR";
+  src: url("../assets/fonts/arita-dotum/AritaDotumKR-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

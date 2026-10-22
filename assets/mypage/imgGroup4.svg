@@ -1,6 +1,6 @@
 <svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="36" height="40" viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Group">
-<path id="Vector" d="M2 38V36C2 29.38 7.38 24 14 24H22C28.62 24 34 29.38 34 36V38" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="black"/>
-<path id="Vector_2" d="M18 18C13.58 18 10 14.42 10 10C10 5.58 13.58 2 18 2C22.42 2 26 5.58 26 10C26 14.42 22.42 18 18 18Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="black"/>
+<path id="Vector" d="M2 38V36C2 29.38 7.38 24 14 24H22C28.62 24 34 29.38 34 36V38" stroke-width="2.000" stroke-linecap="round" stroke-linejoin="round" stroke="#554d46"/>
+<path id="Vector_2" d="M18 18C13.58 18 10 14.42 10 10C10 5.58 13.58 2 18 2C22.42 2 26 5.58 26 10C26 14.42 22.42 18 18 18Z" stroke-width="2.000" stroke-linecap="round" stroke-linejoin="round" stroke="#554d46"/>
 </g>
 </svg>

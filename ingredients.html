@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>한율의 원료 | 한율</title>
+  <link rel="stylesheet" href="./css/fonts.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/shared-pages.css" />
+  <link rel="stylesheet" href="./css/ingredients.css" />
+  <script src="./js/shared-pages.js" defer></script>
+  <script src="./js/ingredients-data.js" defer></script>
+  <script src="./js/ingredients.js" defer></script>
+</head>
+<body class="inner-page ingredients-page">
+<header class="site-header" aria-label="주요 메뉴">
+            <a class="brand" href="./index.html" aria-label="한율 홈">
+                <img src="./assets/shared/logo.png" alt="한율" />
+            </a>
+
+            <nav class="primary-nav" aria-label="주요 내비게이션">
+                <a href="./shop.html">쇼핑</a>
+                <a href="./brand.html">브랜드</a>
+                <a href="./ingredients.html" aria-current="page">한율의 원료</a>
+                <a  class="is-unlinked" aria-disabled="true" tabindex="-1">고객센터</a>
+                <a class="mobile-account-link" href="./mypage.html">마이페이지</a>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" aria-label="검색" disabled aria-disabled="true">
+                    <img src="./assets/shared/search.svg" alt="" />
+                </button>
+                <a href="./mypage.html" aria-label="마이페이지">
+                    <img src="./assets/shared/person.svg" alt="" />
+                </a>
+                <button type="button" aria-label="장바구니" disabled aria-disabled="true">
+                    <img src="./assets/shared/shopping-bag.svg" alt="" />
+                </button>
+            </div>
+
+            <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+<main>
+  <section class="ingredients-hero" aria-labelledby="ingredients-page-title">
+    <div class="ingredients-hero-image" aria-hidden="true"><img id="ingredient-hero-image" src="./assets/ingredients/mugwort-hero.png" alt="" /></div>
+    <div class="ingredients-hero-content">
+      <div class="ingredients-brand"><img src="./assets/ingredients/wordmark.png" alt="HANYUL" /><h1 id="ingredients-page-title">INGREDIENTS<span class="ingredients-sr-only"> — 한율의 원료</span></h1></div>
+      <nav class="ingredients-menu" aria-label="원료별 효능 선택">
+        <button type="button" data-ingredient="mugwort" aria-pressed="true">Cica / Hydrate</button>
+        <button type="button" data-ingredient="yuja" aria-pressed="false">Brightening</button>
+        <button type="button" data-ingredient="red-rice" aria-pressed="false">Ceramide</button>
+        <button type="button" data-ingredient="chestnut" aria-pressed="false">Chestnut Shell</button>
+        <button type="button" data-ingredient="chrysanthemum" aria-pressed="false">Niacinamide</button>
+        <button type="button" data-ingredient="nature" aria-pressed="false">Nature in Life</button>
+        <button type="button" data-ingredient="ginkgo" aria-pressed="false">Vegan Peptides</button>
+        <button type="button" data-ingredient="ginseng" aria-pressed="false">Anti Aging</button>
+        <button type="button" data-ingredient="mushroom" aria-pressed="false">Glutathione</button>
+        <button type="button" data-ingredient="songdam" aria-pressed="false">Slow Aging</button>
+      </nav>
+    </div>
+  </section>
+  <div id="ingredient-content">
+    <section class="ingredient-story" aria-labelledby="ingredient-title">
+      <figure class="ingredient-photo"><img id="ingredient-detail-image" src="./assets/ingredients/mugwort-detail.png" alt="어린쑥" /><figcaption id="ingredient-name">Young mugwort</figcaption></figure>
+      <div class="ingredient-description"><h2 id="ingredient-title">단오 무렵의 땅 속에서 찾은<br />진정과 수분의 힘, ‘어린 쑥’</h2><div class="ingredient-paragraphs" id="ingredient-paragraphs"></div><p class="ingredient-note">*원료적 특성에 한함</p></div>
+    </section>
+    <section class="ingredient-products" aria-labelledby="ingredient-products-title">
+      <h2 class="ingredients-sr-only" id="ingredient-products-title">어린쑥 관련 상품</h2>
+      <div class="ingredient-products-toolbar"><a class="ingredient-view-all" href="./shop.html"><span>VIEW ALL</span><img src="./assets/ingredients/view-all.svg" alt="" /></a></div>
+      <div class="ingredient-product-list" id="ingredient-product-list"></div>
+    </section>
+  </div>
+  <p class="ingredients-sr-only" id="ingredient-status" role="status" aria-live="polite"></p>
+</main>
+<footer class="site-footer">
+            <div class="footer-shop">
+                <p class="footer-label">APMALL</p>
+                <p class="footer-message">지금은 한율과 함께<br />아름다워지는 시간입니다.</p>
+                <a class="footer-shop-link" href="./shop.html">한율제품 구매하기</a>
+            </div>
+
+            <div class="footer-social" aria-label="한율 소셜 미디어">
+                <a  aria-label="인스타그램"
+                     class="is-unlinked" aria-disabled="true" tabindex="-1"><img src="./assets/shared/footer-instagram.svg" alt=""
+                /></a>
+                <a  aria-label="틱톡" class="is-unlinked" aria-disabled="true" tabindex="-1"><img src="./assets/shared/footer-tiktok.svg" alt="" /></a>
+                <a  aria-label="유튜브" class="is-unlinked" aria-disabled="true" tabindex="-1"><img src="./assets/shared/footer-youtube.svg" alt="" /></a>
+                <a  aria-label="트위터" class="is-unlinked" aria-disabled="true" tabindex="-1"><img src="./assets/shared/footer-twitter.svg" alt="" /></a>
+                <a  aria-label="페이스북"
+                     class="is-unlinked" aria-disabled="true" tabindex="-1"><img src="./assets/shared/footer-facebook.svg" alt=""
+                /></a>
+            </div>
+
+            <div class="footer-service">
+                <p>고객서비스 센터(수신자요금부담)</p>
+                <strong>080.023.5454</strong>
+                <p>상담시간 AM 9:00 ~ PM 6:00<br />(*주말/공휴일 휴무)</p>
+            </div>
+
+            <img class="footer-wordmark" src="./assets/shared/photo-section-wordmark.png" alt="HANYUL" />
+
+            <div class="footer-bottom">
+                <nav aria-label="푸터 메뉴">
+                    <a  class="is-unlinked" aria-disabled="true" tabindex="-1">영상정보처리기기 운영 및 관리 방침</a>
+                    <a  class="is-unlinked" aria-disabled="true" tabindex="-1">서비스이용약관</a>
+                    <a  class="is-unlinked" aria-disabled="true" tabindex="-1">개인정보처리방침</a>
+                    <a  class="is-unlinked" aria-disabled="true" tabindex="-1">뷰티포인트</a>
+                    <a  class="is-unlinked" aria-disabled="true" tabindex="-1">사이트맵</a>
+                </nav>
+                <p>ⓒ AMOREPACIFIC CORPORATION. All rights reserved</p>
+            </div>
+        </footer>
+</body>
+</html>

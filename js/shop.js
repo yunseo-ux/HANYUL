@@ -5,7 +5,7 @@ let category = 'best';
 const resizeCards = () => {
   shopGrid.querySelectorAll('.shop-item').forEach((item) => {
     item.style.setProperty('--card-scale', item.clientWidth / 326);
-    item.style.height = `${item.clientWidth * 510 / 326}px`;
+    item.querySelector('.shop-artwork').style.height = `${item.clientWidth * 390 / 326}px`;
   });
 };
 
@@ -28,6 +28,27 @@ const renderProducts = () => {
     });
     imageViewport.appendChild(imageContent);
     canvas.appendChild(imageViewport);
+    const originalPrice = canvas.querySelector('[style*="line-through"]').textContent.trim();
+    [...canvas.children].filter((layer) => layer !== imageViewport).forEach((layer) => layer.remove());
+    canvas.style.height = '390px';
+    const artwork = document.createElement('div');
+    artwork.className = 'shop-artwork';
+    artwork.appendChild(canvas);
+    const info = document.createElement('div');
+    info.className = 'shop-product-info';
+    const title = document.createElement('h2');
+    title.textContent = product.name;
+    const prices = document.createElement('p');
+    prices.className = 'shop-product-prices';
+    const discount = document.createElement('span');
+    discount.textContent = `${product.discount}%`;
+    const price = document.createElement('strong');
+    price.textContent = `${product.price.toLocaleString('ko-KR')}원`;
+    const original = document.createElement('del');
+    original.textContent = originalPrice;
+    prices.append(discount, price, original);
+    info.append(title, prices);
+    article.append(artwork, info);
     return article;
   }));
   document.querySelector('#shop-count').textContent = `${products.length}개의 상품`;

@@ -16,6 +16,25 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const brandPhotoSection = document.querySelector('.brand-photo');
 const heroSection = document.querySelector('.hero');
 
+if (heroSection) {
+  const header = document.querySelector('.site-header');
+  const hoverZone = document.createElement('div');
+  hoverZone.className = 'header-hover-zone';
+  hoverZone.setAttribute('aria-hidden', 'true');
+  document.body.prepend(hoverZone);
+  document.body.classList.add('home-hover-header');
+
+  const revealHeader = () => document.body.classList.add('header-revealed');
+  const hideHeader = (event) => {
+    if (header.contains(event.relatedTarget) || hoverZone.contains(event.relatedTarget)) return;
+    document.body.classList.remove('header-revealed');
+  };
+  [hoverZone, header].forEach((element) => {
+    element.addEventListener('pointerenter', revealHeader);
+    element.addEventListener('pointerleave', hideHeader);
+  });
+}
+
 const photoWordmark = document.querySelector('.brand-photo-wordmark');
 
 if (brandPhotoSection && photoWordmark) {
@@ -273,6 +292,7 @@ if (brandPhotoSection && heroSection) {
 
   const updateHeaderVisibility = () => {
     const isHeroVisible = heroSection.getBoundingClientRect().bottom > 0;
+    document.body.classList.toggle('hero-header-visible', isHeroVisible);
     const hasReachedBrandPhoto = brandPhotoSection.getBoundingClientRect().top <= window.innerHeight;
     const shouldHideHeader = !isHeroVisible && !hasReachedBrandPhoto;
     document.body.classList.toggle('before-brand-photo', shouldHideHeader);

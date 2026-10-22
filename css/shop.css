@@ -1,7 +1,7 @@
 .shop-page { background: #fff; color: #000; }
 .shop-page .site-header { position: relative; top: 0; width: 100%; max-width: none; height: 80px; padding: 0 7.8%; border-radius: 0; background: #554d46; backdrop-filter: none; }
 .shop-page .primary-nav { gap: 54px; }
-.shop-page .primary-nav a { font-size: 20px; }
+.shop-page .primary-nav a { font-size: 18px; }
 .shop-heading { height: 160px; text-align: center; }
 .shop-heading h1 { margin: 0; padding-top: 30px; font-family: "Arita Buri", "Noto Serif KR", serif; font-size: 25px; font-weight: 600; }
 .shop-tabs { display: flex; justify-content: center; gap: 72px; margin-top: 34px; }

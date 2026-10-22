@@ -1,0 +1,55 @@
+/* Shared type sizes for shopping, brand, and account pages. */
+:root {
+  --page-title-size: 30px;
+  --section-title-size: 24px;
+  --body-text-size: 16px;
+  --small-text-size: 14px;
+  --price-text-size: 24px;
+  --menu-text-size: 18px;
+}
+.shop-page, .inner-page { font-size: var(--body-text-size); }
+.shop-page .primary-nav a, .inner-page .primary-nav a,
+.shop-tabs button { font-size: var(--menu-text-size); }
+.shop-heading h1, .account-main > h1, .story-hero-copy h1,
+.account-welcome h2 { font-size: var(--page-title-size); }
+.shop-heading h1, .account-main > h1 { font-weight: 500; }
+.brand-page h2, .brand-page .pillar-heading h2,
+.brand-page .story-absorption h2, .story-statement h2,
+.account-menu-group h2, .account-section-heading h2,
+.order-dialog h2 { font-size: var(--section-title-size); }
+.story-hero-copy p, .story-eyebrow, .pillar-heading > p,
+.story-interpretation-copy .story-eyebrow, .story-body,
+.story-absorption .story-body, .pillar-body,
+.story-statement > p:last-child, .gentle-copy,
+.welcome-intro, .welcome-message, .account-menu-group > a,
+.account-menu-group > span, .member-benefits p,
+.recent-product h3, .shop-toolbar p, .shop-select > span,
+.shop-pagination button { font-size: var(--body-text-size); }
+.account-section-heading > p, .account-more, .order-progress p,
+.order-summary > div, .account-orders-table table, .order-detail,
+.member-benefits small, .recent-product small { font-size: var(--small-text-size); }
+.member-benefits strong, .recent-product > p { font-size: var(--price-text-size); }
+.shop-item { height: auto; aspect-ratio: auto; }
+.shop-artwork { position: relative; }
+.shop-artwork .shop-card-canvas { position: absolute !important; top: 0; left: 0; }
+.shop-product-info { padding: 12px 3px 0; }
+.shop-product-info h2 { min-height: 3em; margin: 0; color: #17173c; font-size: var(--body-text-size); font-weight: 500; line-height: 1.5; text-align: center; word-break: keep-all; }
+.shop-product-prices { display: flex; align-items: baseline; flex-wrap: wrap; gap: 7px; margin: 16px 0 0; }
+.shop-product-prices strong, .shop-product-prices > span { font-size: var(--price-text-size); font-weight: 600; }
+.shop-product-prices > span { color: #5486c1; }
+.shop-product-prices del { color: #4b4b4b; font-size: var(--small-text-size); }
+@media (max-width: 760px) {
+  :root {
+    --page-title-size: 28px;
+    --section-title-size: 20px;
+    --body-text-size: 14px;
+    --small-text-size: 12px;
+    --price-text-size: 20px;
+    --menu-text-size: 16px;
+  }
+  .shop-select > span, .shop-select:first-child > span { font-size: var(--small-text-size); }
+  .story-statement { padding-right: 20px; padding-left: 20px; }
+  .brand-page .pillar-heading h2 { white-space: normal; }
+  .account-section-heading { flex-wrap: wrap; }
+  .recent-product h3 { line-height: 1.5; }
+}

@@ -1,0 +1,171 @@
+.account-main { min-height: 2212px; padding: 79.2px 7.08% 288px; background: url('../assets/mypage/imgBody.png') center / cover no-repeat; }
+.account-main > h1 { font-family: "Arita Buri", "Noto Serif KR", serif; font-size: 38.4px; font-weight: 500; text-align: center; }
+.account-layout { display: grid; grid-template-columns: 305fr 1265fr; gap: 49.6px; max-width: 1307px; margin: 92.8px auto 0; }
+.account-menu-icon img, .benefit-summary-icon img, .order-step-icon img,
+.favorite-button img, .recent-prev img, .recent-next img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.account-menu-divider { max-width: 100%; }
+.account-menu-icon img { width: 28px; height: 28px; }
+.benefit-summary-icon img { width: 36px; height: 36px; }
+.order-step-icon img { width: 28px; height: 28px; }
+.order-step-icon img[src$="imgIcOutlineShoppingBag.svg"] { width: 42px; height: 42px; }
+.favorite-button img { width: 20px; height: 20px; }
+.account-more img { width: 9.6px; height: 19.2px; }
+.account-sidebar { min-width: 0; height: 1204px; padding: 47.2px 28px; border: 1px solid #554d46; border-radius: 12px; background: #fefcfb; }
+.account-menu-group { display: grid; gap: 26.4px; }
+.account-menu-group h2 { margin-bottom: 0; font-size: 22.4px; font-weight: 600; letter-spacing: .04em; }
+.account-menu-group > a, .account-menu-group > span { display: flex; align-items: center; gap: 12px; color: #000; text-decoration: none; font-size: 17.6px; white-space: nowrap; }
+.account-menu-group > a:hover { color: #95816f; }
+.account-menu-icon { width: 38.4px; height: 38.4px; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 38.4px; }
+.account-menu-divider { display: block; margin: 48.8px 0 40px; }
+.account-content { min-width: 0; }
+.account-menu-group > a,
+.account-menu-group > span { font-weight: 500; }
+.member-benefits p,
+.order-progress p,
+.account-orders-table td:nth-child(2),
+.account-orders-table td:nth-child(4) { font-weight: 600; }
+.account-welcome { min-height: 392px; padding: 40.8px 54.4px; border: 1px solid #554d46; border-radius: 12px; background: rgba(255,255,255,.8); color: #222; }
+.welcome-intro { font-size: 22.4px; }
+.account-welcome h2 { margin-top: 12.8px; font-size: 41.6px; font-weight: 500; }
+.welcome-message { margin-top: 16px !important; font-size: 19.2px; }
+.member-benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; min-height: 144px; margin-top: 40px; padding: 25.6px 28.8px; border: 1px solid #554d46; border-radius: 24px; background: #fff; }
+.member-benefits > div { display: flex; align-items: center; justify-content: center; gap: 22.4px; }
+.benefit-summary-icon { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; flex-shrink: 0; }
+.member-benefits p { font-size: 17.6px; white-space: nowrap; }
+.member-benefits strong { display: block; margin-top: 15.2px; font-size: 32px; font-weight: 400; white-space: nowrap; }
+.member-benefits small { font-size: 22.4px; }
+.account-section { margin-top: 80px; scroll-margin-top: 24px; }
+.account-section-heading { display: flex; align-items: baseline; gap: 16px; margin-bottom: 21.6px; }
+.account-section-heading h2 { font-size: 22.4px; font-weight: 500; letter-spacing: .02em; }
+.account-section-heading > p { font-size: 12.8px; }
+.account-more { display: inline-flex; align-items: center; gap: 12px; margin-left: auto; color: inherit; text-decoration: none; font-size: 12.8px; white-space: nowrap; }
+.account-more img { transform: rotate(90deg); }
+.account-status-layout { display: grid; grid-template-columns: 918fr 320fr; gap: 21.6px; }
+.order-progress { position: relative; display: flex; align-items: center; justify-content: space-around; min-height: 176px; padding: 20px 8px; border: 1px solid #554d46; border-radius: 12px; background: #fff; }
+.order-progress > div:not(.order-progress-line) { position: relative; display: flex; flex-direction: column; align-items: center; gap: 20px; z-index: 1; }
+.order-progress p { font-size: 14.4px; color: #000; white-space: nowrap; }
+.order-step-icon { width: 59.2px; height: 59.2px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #fff; border: 1px solid #ece5df; }
+.is-current .order-step-icon { background: #cfbdae; }
+.order-progress-line { position: absolute; top: 41%; left: 50%; transform: translateX(-50%); width: calc(100% - 80px); height: 14.4px; overflow: hidden; }
+.order-progress-line img { position: absolute; left: 50%; transform: translateX(-50%); }
+.order-summary { margin: 0; padding: 22.4px 24px; background: #fff; border: 1px solid #554d46; border-radius: 12px; }
+.order-summary > div { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid #e9e5e2; font-size: 12.8px; }
+.order-summary > div:not(:last-child) { border-bottom: 0; background: url('../assets/mypage/imgLine19.svg') left bottom no-repeat; }
+.order-summary > div:first-child { padding-top: 0; }
+.order-summary > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.order-summary dd { margin: 0; }
+.account-orders-table { overflow-x: auto; border: 1px solid #554d46; border-radius: 12px; background: rgba(255,255,255,.8); }
+.account-orders-table table { width: 100%; border-collapse: collapse; color: #000; text-align: center; font-size: 12.8px; white-space: nowrap; }
+.account-orders-table th { padding: 19.2px 8px; border-bottom: 1px solid #554d46; font-weight: 500; }
+.account-orders-table thead { background: url('../assets/mypage/imgLine9.svg') center bottom no-repeat; }
+.account-orders-table td { padding: 33.6px 8px; border-bottom: 1px solid #e9e5e2; }
+.account-orders-table tr:last-child td { border-bottom: 0; }
+.order-detail { padding: 8px 16px; border: 1px solid #e9e5e2; border-radius: 5px; background: #fff; font-size: 12px; color: #000; cursor: pointer; }
+.order-in-transit { color: #b38b4d; }
+.recent-carousel { position: relative; }
+.recent-product-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.recent-product-track::-webkit-scrollbar { display: none; }
+.recent-product { position: relative; flex: 0 0 calc((100% - 64px) / 5); min-width: 0; height: 320px; overflow: hidden; border: 1px solid #554d46; border-radius: 12px; background: #fff; text-align: center; scroll-snap-align: start; }
+.recent-product-image { display: block; width: 116px; height: 116px; margin: 73.6px auto 44px; object-fit: cover; }
+.recent-product h3 { padding: 0 9.6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 16px; font-weight: 600; line-height: 22.4px; letter-spacing: -.07em; color: #000; }
+.recent-product > p { margin-top: 16px; font-size: 27.2px; color: #000; }
+.recent-product small { font-size: 20.8px; }
+.favorite-button { position: absolute; top: 12px; right: 12px; display: grid; place-items: center; width: 36px; height: 36px; padding: 4px; border: 0; border-radius: 50%; background: transparent; cursor: pointer; }
+.favorite-button[aria-pressed="true"] { background: transparent; }
+.recent-prev, .recent-next { position: absolute; top: 50%; z-index: 2; display: grid; place-items: center; width: 25.6px; height: 41.6px; padding: 0; border: 0; border-radius: 50%; background: transparent; transform: translateY(-50%); cursor: pointer; }
+.recent-prev { left: -36px; }
+.recent-prev img { transform: rotate(180deg); }
+.recent-next { right: -36px; }
+.recent-prev:disabled, .recent-next:disabled { opacity: .25; cursor: default; }
+.order-dialog { max-width: min(90vw, 416px); padding: 28px; border: 1px solid #554d46; border-radius: 12.8px; color: #554d46; }
+.order-dialog::backdrop { background: rgba(0,0,0,.35); }
+.order-dialog h2 { margin-bottom: 20px; }
+.order-dialog dl > div { display: grid; grid-template-columns: 72px 1fr; gap: 16px; margin: 14.4px 0; }
+.order-dialog dd { margin: 0; }
+.order-dialog form { text-align: right; }
+.order-dialog form button { padding: 8px 20px; background: #554d46; color: #fff; border: 0; border-radius: 5px; cursor: pointer; }
+@media (max-width: 1500px) {
+  .account-main { padding: 60px 7% 192px; min-height: 1760px; }
+  .account-layout { grid-template-columns: 188px minmax(0, 1fr); gap: 28px; margin-top: 72px; }
+  .account-sidebar { padding: 36px 16px; height: 1040px; }
+  .account-menu-group { gap: 20px; }
+  .account-menu-group h2 { font-size: 18.4px; }
+  .account-menu-group > a, .account-menu-group > span { font-size: 14.4px; gap: 8px; }
+  .account-menu-divider { max-width: 100%; }
+  .account-welcome { padding: 32px 28px; min-height: 336px; }
+  .member-benefits { padding: 20px 12px; gap: 12px; }
+  .member-benefits > div { gap: 9.6px; }
+  .member-benefits p { font-size: 12.8px; }
+  .member-benefits strong { font-size: 22.4px; }
+  .member-benefits small { font-size: 16px; }
+  .account-section-heading { gap: 11.2px; flex-wrap: wrap; }
+  .account-section-heading h2 { font-size: 19.2px; }
+  .account-section-heading > p { font-size: 12px; }
+  .order-progress p { font-size: 12px; }
+  .order-step-icon { width: 48px; height: 48px; }
+  .order-summary { padding: 20px 12.8px; }
+  .order-summary > div { font-size: 12px; }
+  .recent-product { flex-basis: calc((100% - 32px) / 3); }
+}
+@media (max-width: 1100px) {
+  .account-layout { grid-template-columns: 152px minmax(0, 1fr); gap: 20px; }
+  .account-menu-group > a, .account-menu-group > span { gap: 4px; font-size: 12px; }
+  .account-sidebar { padding: 28px 12px; }
+  .account-menu-icon { transform: scale(.8); width: 32px; flex-basis: 32px; }
+  .account-welcome { padding: 24px 17.6px; }
+  .welcome-intro { font-size: 16px; }
+  .account-welcome h2 { font-size: 32px; }
+  .welcome-message { font-size: 14.4px; }
+  .member-benefits > div { flex-direction: column; text-align: center; gap: 8px; }
+  .member-benefits strong { margin-top: 8px; }
+  .account-status-layout { grid-template-columns: 1fr; }
+  .order-summary { display: flex; justify-content: space-around; gap: 12px; }
+  .order-summary > div { flex-direction: column; align-items: center; border: 0; padding: 0; }
+}
+@media (max-width: 760px) {
+  .account-main { padding: 36px 16px 120px; min-height: 0; }
+  .account-main > h1 { font-size: 25.6px; }
+  .account-layout { display: flex; flex-direction: column; gap: 24px; margin-top: 28px; }
+  .account-sidebar { display: flex; gap: 20px; overflow-x: auto; height: auto; padding: 16px; }
+  .account-menu-group { flex: 0 0 auto; gap: 9.6px; }
+  .account-menu-group h2 { font-size: 14.4px; margin-bottom: 4.8px; }
+  .account-menu-group > a, .account-menu-group > span { font-size: 12px; }
+  .account-menu-icon { width: 22.4px; height: 25.6px; flex-basis: 22.4px; transform: scale(.55); }
+  .account-menu-divider { display: none; }
+  .account-welcome { min-height: 0; padding: 20.8px 14.4px; }
+  .welcome-intro { font-size: 13.6px; }
+  .account-welcome h2 { font-size: 27.2px; }
+  .welcome-message { font-size: 12px; }
+  .member-benefits { gap: 4.8px; padding: 16px 6.4px; margin-top: 24px; min-height: 0; border-radius: 14.4px; }
+  .benefit-summary-icon { transform: scale(.65); height: 33.6px; }
+  .member-benefits p { font-size: 12px; }
+  .member-benefits strong { font-size: 18.4px; }
+  .member-benefits small { font-size: 12px; }
+  .account-section { margin-top: 40px; }
+  .account-section-heading { gap: 8px; margin-bottom: 16px; }
+  .account-section-heading h2 { font-size: 16.8px; }
+  .account-section-heading > p { font-size: 11px; }
+  .account-more { font-size: 12px; gap: 4.8px; }
+  .order-progress { min-height: 124px; padding: 16px 4px; }
+  .order-progress > div:not(.order-progress-line) { gap: 12px; }
+  .order-step-icon { width: 35.2px; height: 35.2px; }
+  .order-step-icon img { transform: scale(.65); }
+  .order-progress p { font-size: 10px; }
+  .order-progress-line { top: 37%; width: calc(100% - 44px); }
+  .order-summary { gap: 6.4px; padding: 16px 8px; }
+  .order-summary > div { font-size: 11px; }
+  .account-orders-table table { min-width: 576px; font-size: 12px; }
+  .account-orders-table td { padding: 20.8px 8px; }
+  .order-detail { font-size: 12px; padding: 6.4px 11.2px; }
+  .recent-product { flex-basis: calc((100% - 12.8px) / 2); height: 240px; }
+  .recent-product-track { gap: 12.8px; }
+  .recent-product-image { width: 88px; height: 88px; margin: 52px auto 28px; }
+  .recent-product h3 { font-size: 12px; padding: 0 6.4px; }
+  .recent-product > p { margin-top: 8px; font-size: 19.2px; }
+  .recent-product small { font-size: 13.6px; }
+  .favorite-button { top: 9.6px; right: 9.6px; }
+  .recent-prev, .recent-next { position: static; transform: none; background: rgba(255,255,255,.8); width: 25.6px; height: 38.4px; }
+  .recent-carousel { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .recent-product-track { grid-column: 1 / -1; grid-row: 1; }
+  .recent-next { justify-self: end; }
+}

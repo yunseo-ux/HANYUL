@@ -1378,8 +1378,23 @@ body.before-brand-photo .site-header {
   object-position: center;
   opacity: .9;
 }
-.hero-slide:first-child .hero-product-image { opacity: .95; }
-.hero-slide:nth-child(2) .hero-product-image { opacity: 1; }
+.hero-slide:first-child .hero-product-image { opacity: 1; }
+.hero-slide:nth-child(2) .hero-product-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .9;
+}
+.hero-slide:nth-child(3) .hero-product-image {
+  position: absolute;
+  left: -3.54%;
+  top: -8.95%;
+  width: 108.98%;
+  height: 108.98%;
+  opacity: .9;
+}
 .hero-product-copy {
   position: absolute;
   top: 31.88%;
